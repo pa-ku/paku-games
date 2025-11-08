@@ -2,8 +2,9 @@ import './app.css'
 import { GameCard } from './components/GameCard'
 import matatena from './assets/matatena.png'
 import mosquettuti from './assets/mosquettuti.png'
-import magicType from './assets/magicType.png'
+import magicType from './assets/magictype.png'
 import rosco from './assets/rosco.png'
+import mapukimun from './assets/mapukimun.png'
 
 const games = [
   {
@@ -36,6 +37,13 @@ const games = [
     url: 'https://rosco.paku.com.ar/',
     category: 'Adivinanza',
   },
+  {
+    title: 'Mapukimun',
+    description: 'Adivina la flora y fauna de Neuquen',
+    image: mapukimun,
+    url: 'https://www.mapukimun.com.ar/',
+    category: 'Adivinanza',
+  },
 ]
 
 export function App() {
@@ -64,7 +72,7 @@ export function App() {
         className=' py-12 px-4 flex flex-col items-center justify-center'
       >
         <div className='container'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {games.map((game) => (
               <GameCard key={game.title} {...game} />
             ))}

@@ -14,8 +14,8 @@ export const GameCard = ({
   category,
 }: GameCardProps) => {
   return (
-    <div className='group overflow-hidden border-border bg-cyan-900/20 hover:shadow-cyan-900/50 shadow-lg ransition-all duration-300 rounded-3xl'>
-      <div className='p-0'>
+    <div className='group  overflow-hidden border-border bg-cyan-900/20 hover:shadow-cyan-900/50 shadow-lg ransition-all duration-300 rounded-3xl'>
+      <div className=''>
         <div className='relative aspect-video overflow-hidden'>
           <img
             src={image}
@@ -36,12 +36,14 @@ export const GameCard = ({
             {description}
           </p>
         </div>
-        <button
-          className=' px-8 rounded-b-xl font-bold  cursor-pointer py-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground '
-          onClick={() => window.open(url, '_blank')}
-        >
-          Jugar
-        </button>
+        <div className='p-3 flex items-center w-full justify-center'>
+          <button
+            className=' px-10 w-full rounded-xl font-bold  cursor-pointer py-2  bg-primary hover:bg-primary/90 text-primary-foreground '
+            onClick={() => window.open(url, '_blank')}
+          >
+            Jugar
+          </button>
+        </div>
       </div>
     </div>
   )
